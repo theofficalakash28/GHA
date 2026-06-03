@@ -11,11 +11,11 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: my-artifact
-            path: /
+            path: /home
         - name: cache modules
           uses: actions/cache@v4
           with:
-            path: path/to/modules
+            path: /home
             key: ${{ runner.os }}-modules-${{ hashFiles('**/go.sum') }}
     test:
         runs-on: ubuntu-latest
