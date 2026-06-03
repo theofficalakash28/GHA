@@ -2,7 +2,7 @@ name: test-workflow-2
 
 on: [push]
 
-jobs: 
+jobs:
   build:
     strategy:
       matrix:
@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         include:
           - os: ubuntu-latest
-            node-version: 14 # Fixed key name to match 'node-version'
+            node-version: 14
             
     runs-on: ${{ matrix.os }}
     
