@@ -1,0 +1,13 @@
+name: test_workflow_3
+on: workflow_call
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
