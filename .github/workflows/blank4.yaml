@@ -1,7 +1,10 @@
 name: test_workflow_4
-
 on: [workflow_dispatch]
-
 jobs:
-  call-reusable:
-    uses: ./.github/workflows/blank3.yml
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download code
+        uses: actions/checkout@v4
+      - name: Pull some reusable workflow
+        uses: ./.workflows/blank3.yml
